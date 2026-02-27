@@ -49,3 +49,14 @@ docker build -t mlops-task .           # `.` = current directory (where Dockerfi
 ```bash
 docker run --rm mlops-task
 ```
+
+### Explanation
+
+- `python run.py --input data.csv --config config.yaml --output metrics.json --log-file run.log`  
+  Runs the batch job locally using the provided configuration and dataset, and writes metrics and logs.
+
+- `docker build -t mlops-task .`  
+  Builds a Docker image containing the project and its dependencies.
+
+- `docker run --rm mlops-task`  
+  Executes the batch job inside a Docker container and prints the final metrics JSON to stdout.
